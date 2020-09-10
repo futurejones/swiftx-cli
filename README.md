@@ -9,7 +9,7 @@ Create, build, and export Swift applications.
 #
 
 ## Build a Swift Project
-Build project from file 'helloworld.swift'  
+Build project from file `helloworld.swift`  
 `$ swiftx build helloworld.swift`  
 This will output an executable file `helloworld`
 
