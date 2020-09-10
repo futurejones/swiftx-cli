@@ -1,7 +1,7 @@
 #
 
 <p align="center">
-<img src="images/SwiftX_icon@128.png" alt="SwiftX logo" height="80">  
+<img src="images/SwiftX_icon@128.png" alt="SwiftX logo" height="128">  
 <p align="center">
 Create, build, and export Swift applications.
 </p>
