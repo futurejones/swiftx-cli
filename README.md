@@ -1,10 +1,14 @@
 # SwiftX
-<img src="https://img.shields.io/badge/Swift-5.*.*-orange.svg" /> <img src="https://img.shields.io/badge/Debian-10-green.svg" /> <img src="https://img.shields.io/badge/Ubuntu-18.04-green.svg" /> <img src="https://img.shields.io/badge/Ubuntu-20.04-green.svg" /> <img src="https://img.shields.io/badge/RaspiOS-Buster-red.svg" /> <img src="https://img.shields.io/badge/Raspbian-Buster-red.svg" />  
+<img src="https://img.shields.io/badge/Swift-5.1 +-orange.svg" /> <img src="https://img.shields.io/badge/Debian-10-green.svg" /> <img src="https://img.shields.io/badge/Ubuntu-18.04-green.svg" /> <img src="https://img.shields.io/badge/Ubuntu-20.04-green.svg" /> <img src="https://img.shields.io/badge/RaspiOS-Buster-red.svg" /> <img src="https://img.shields.io/badge/Raspbian-Buster-red.svg" />  
 
 ### Create, build, and export Swift applications.
 SwiftX uses the [Swift-Lite](https://swift-lite.org) system of meta-tags combined with a special build utility to make constructing a multi-file Swift project with Module and Library dependencies simple and easy.  
-For more information please visit [Swift-Lite.org](https://swift-lite.org)  
-Swiftx combines both `swift-lite-build` and `lib-builder` into one convenient package.
+For more information please visit [Swift-Lite.org](https://swift-lite.org).  
+SwiftX combines both `swift-lite-build` and `lib-builder` into one convenient build tool.
+
+SwiftX is designed for use on Linux Debian based systems such as Debian, Ubuntu and RaspiOS. SwiftX is compatible with Swift versions 5.1 and above and can be used with a full Swift - `swiftlang` install, as well as with Swift-Lite - `swiftlang-min`.
+
+SwiftX is available for x86_64, arm64 and arm architectures.
 
 ## Build a Swift Project
 Build project from file `helloworld.swift`
