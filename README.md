@@ -74,3 +74,37 @@ Install: sudo apt install ./helloworld_1.0.0.deb
     ________________________________
 ```
 This will output a self contained installable package file that includes the program executable and the `swift-slim` runtime. `helloworld_1.0.0.deb`
+
+## Help
+```bash
+$ swiftx --help
+
+A Swift build tool:
+
+SwiftX allows you to quickly and easily create Swift applications.
+
+    ————————————————
+
+Features:
+ Support for custom modules and libraries.
+ Export self contained packages that include the Swift runtime
+
+     ————————————————
+
+Usage:
+  swiftx [flags]
+  swiftx [command]
+
+Available Commands:
+  build       Build a Swift project
+  config      Set the swiftModule directory path.
+  create      Create a Swift library
+  export      Export self contained install package with Swift runtime
+  help        Help about any command
+
+Flags:
+  -h, --help      help for swiftx
+  -v, --version   Prints the swiftx version number
+
+Use "swiftx [command] --help" for more information about a command.
+```
