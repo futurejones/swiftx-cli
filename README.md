@@ -10,6 +10,77 @@ SwiftX is designed for use on Linux Debian based systems such as Debian, Ubuntu 
 
 SwiftX is available for x86_64, arm64 and arm architectures.
 
+## Sample Project File
+helloworld.swift
+```swift
+// a swift project file
+// include: today.swift
+
+import Dispatch
+import Foundation
+
+print("Hello World")
+printToday()  // function from today.swift module
+
+```
+
+## Sample Module File
+
+today.swift
+```swift
+// a swift module file
+
+import Foundation
+
+public func printToday(){
+    let date = Date()
+    let dateFormatter = DateFormatter()
+
+    dateFormatter.dateStyle = .full
+    dateFormatter.timeStyle = .full
+
+    let dateString = dateFormatter.string(from: date as Date)
+    print("Welcome to Swift")
+    print("Today is \(dateString)")
+}
+```
+NOTE: modules files must be located within the `swiftModules` directory. The location of the `swiftModules` directory can be set using `swiftx config`.
+```bash
+$ swiftx config --help
+
+Set the swiftModule directory path.
+
+Choose one of the following:-
+
+    ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ 1. Local:
+  This will look for modules within the project directory.
+        e.g. /myProject/swiftModules/
+        cmd = $ swiftx config --local
+    ________________________________
+
+ 2. Default:
+  This will look for modules within the $HOME directory.
+        e.g. /$HOME/swiftModules/
+        cmd = $ swiftx config --default
+    ________________________________
+
+ 3. Custom:
+  Use this option to set a custom directory.
+        e.g. /custom/path/swiftModules/
+        cmd = $ swiftx config --custom /my/custom/path/swiftModules/
+    ________________________________
+
+Usage:
+  swiftx config [flags]
+
+Flags:
+  -c, --custom string   Set module path to custom
+  -d, --default         Set module path to default
+  -h, --help            help for config
+  -l, --local           Set module path to local
+```
+
 ## Build a Swift Project
 Build project from file `helloworld.swift`
 ```bash
