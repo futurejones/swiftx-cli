@@ -1,8 +1,5 @@
 # SwiftX
 
-
-<img src="images/SwiftX_icon@128.png" alt="SwiftX logo" height="128">  
-
 Create, build, and export Swift applications.
 
 ## Build a Swift Project
