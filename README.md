@@ -10,7 +10,7 @@ SwiftX is designed for use on Linux Debian based systems such as Debian, Ubuntu 
 
 SwiftX is available for x86_64, arm64 and arm architectures.
 
-## [Getting Started](Getting_Started.md)
+### Read the [Quick Start Guide](Getting_Started.md) for installation and getting started instructions.
 
 ## Sample Project File
 helloworld.swift
