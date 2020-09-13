@@ -9,7 +9,8 @@ Raspbian Buster
 RaspiOS Buster
 
 2. Swift version 5.1 or later.  
-NOTE: Swift must be installed in the default location `</usr/lib/ /usr/bin/>` for the export `swift-slim` feature to work.
+NOTE: Swift must be installed in the default location `</usr/lib/ /usr/bin/>` for the export `swift-slim` feature to work.  
+SwiftX works with both the full Swift install (`swiftlang`) and the Swift-min install (`swiftlang-min`)
 
 ## Installation
 ### `apt-get install`
@@ -18,9 +19,10 @@ This simplest way to install both `Swift` and `SwiftX` is to use the [Swift-Arm]
 # install the package repo
 curl -s https://packagecloud.io/install/repositories/swift-arm/release/script.deb.sh | sudo bash
 
-# install swift
+# install swiftlang or swiftlang-min
 sudo apt-get install swiftlang
 
 # install swiftx
 sudo apt-get install swiftx
 ```
+### `manual install`
