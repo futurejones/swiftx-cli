@@ -26,3 +26,11 @@ sudo apt-get install swiftlang
 sudo apt-get install swiftx
 ```
 ## 2. `manual install`
+Select the correct package from the [SwiftX release page](https://github.com/futurejones/swiftx-cli/releases/)
+```bash
+# download the swiftx .deb package
+wget https://github.com/futurejones/swiftx-cli/releases/download/v3.0.0/swiftx_linux-arm64_3.0.0.deb
+
+# install swiftx
+sudo apt-get install swiftx_linux-arm64_3.0.0.deb
+```
