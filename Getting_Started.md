@@ -115,7 +115,8 @@ Return to the swiftProjects directory and edit the helloworld.swift file
 ```bash
 $ cd swiftProjects
 ```
-In you favorite editor change the code to the following.
+In you favorite editor change the code to the following.  
+Use the `//include` tag to add the swift module.
 ```swift
 // include: today.swift
 
