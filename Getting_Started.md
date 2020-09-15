@@ -1,4 +1,5 @@
 [back](README.md)
+#
 # Getting Started
 ## Prerequisites
 1. You will need one of the following Debian based Linux installations.  
@@ -34,6 +35,7 @@ wget https://github.com/futurejones/swiftx-cli/releases/download/v3.0.0/swiftx_l
 # install swiftx
 sudo apt-get install swiftx_linux-arm64_3.0.0.deb
 ```
+#
 # Project 1 - Hello World
 ## 1. Setting up directory structure.
 One of the key features of `SwiftX` is the ability include and re-use `swift module` files with multiple projects. To achieve this we need to have a single location for all our `swift module` files.  
@@ -81,5 +83,69 @@ Complete!
 # run ./helloworld to test
 $ ./helloworld
 Hello World!
+```
+#
+# Project 2 - Hello Module
+## 1. Adding a Swift Module file.
+In this project we will add a `swift module` file and use it in a project.
+
+```bash
+# goto the swiftModules directory
+$ cd swiftModules
+# create a module file - today.swift
+$ touch today.swift
+```
+In you favorite editor add the following line of code to today.swift.
+```swift
+import Foundation
+
+public func printToday(){
+    let date = Date()
+    let dateFormatter = DateFormatter()
+
+    dateFormatter.dateStyle = .full
+    dateFormatter.timeStyle = .full
+
+    let dateString = dateFormatter.string(from: date as Date)
+    print("Welcome to Swift")
+    print("Today is \(dateString)")
+}
+```
+Return to the swiftProjects directory and edit the helloworld.swift file
+```bash
+$ cd swiftProjects
+```
+In you favorite editor change the code to the following.
+```swift
+// include: today.swift
+
+printToday()
+```
+Use `SwiftX` to build the project
+```bash
+$ swiftx build helloworld.swift
+#
+# you should see the following output
+building swift project - helloworld
+
+    ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+Scanning for Modules...
+*** Adding today.swift to build command *** # here you can see the today.swift module was added
+    ________________________________
+
+Scanning for Libraries...
+*** no custom libraries found ***
+    ________________________________
+
+starting swift build...
+Complete!
+
+2020/09/15 07:38:44 build completed.
+    ________________________________
+#
+# run ./helloworld to test
+$ ./helloworld
+Welcome to Swift
+Today is Tuesday, September 15, 2020 at 7:40:56 AM British Summer Time
 ```
 
