@@ -95,7 +95,7 @@ $ cd swiftModules
 # create a module file - today.swift
 $ touch today.swift
 ```
-In you favorite editor add the following line of code to today.swift.
+In you favorite editor add the following lines of code to today.swift.
 ```swift
 import Foundation
 
@@ -129,8 +129,8 @@ $ swiftx build helloworld.swift
 building swift project - helloworld
 
     ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
-Scanning for Modules...
-*** Adding today.swift to build command *** # here you can see the today.swift module was added
+Scanning for Modules... # here you can see the today.swift module was added
+*** Adding today.swift to build command ***
     ________________________________
 
 Scanning for Libraries...
