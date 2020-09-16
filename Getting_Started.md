@@ -1,4 +1,4 @@
-[back](README.md)  
+[back](README.md)
 ---
 # Getting Started
 ## Prerequisites
@@ -34,8 +34,8 @@ wget https://github.com/futurejones/swiftx-cli/releases/download/v3.0.0/swiftx_l
 
 # install swiftx
 sudo apt-get install swiftx_linux-arm64_3.0.0.deb
-```  
-#
+```
+---
 # Project 1 - Hello World
 ## 1. Setting up directory structure.
 One of the key features of `SwiftX` is the ability include and re-use `swift module` files with multiple projects. To achieve this we need to have a single location for all our `swift module` files.  
@@ -83,8 +83,8 @@ Complete!
 # run ./helloworld to test
 $ ./helloworld
 Hello World!
-```  
-#
+```
+---
 # Project 2 - Hello Module
 ## 1. Adding a Swift Module file.
 In this project we will add a `swift module` file and use it in a project.
