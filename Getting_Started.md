@@ -149,4 +149,15 @@ $ ./helloworld
 Welcome to Swift
 Today is Tuesday, September 15, 2020 at 7:40:56 AM British Summer Time
 ```
+---
+# Project 3 - Hello Library
+In this project we will first create a `swift library` file and then use it in a project.
+## 1. Create and install a Swift Library.
+
+## 2. Importing a Swift Library.
+
+---
+# Project 3 - Hello Export
+In this project we will export a `swift application` complete with the `Swift-Slim` runtime.
+## 1. Export a Swift Application.
 
