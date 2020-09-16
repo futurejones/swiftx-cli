@@ -21,7 +21,7 @@ This simplest way to install both `Swift` and `SwiftX` is to use the [Swift-Arm]
 curl -s https://packagecloud.io/install/repositories/swift-arm/release/script.deb.sh | sudo bash
 
 # install swiftlang or swiftlang-min
-sudo apt-get install swiftlang
+sudo apt-get install swiftlang-min
 
 # install swiftx
 sudo apt-get install swiftx
@@ -33,7 +33,7 @@ Select the correct package from the [SwiftX release page](https://github.com/fut
 wget https://github.com/futurejones/swiftx-cli/releases/download/v3.0.0/swiftx_linux-arm64_3.0.0.deb
 
 # install swiftx
-sudo apt-get install swiftx_linux-arm64_3.0.0.deb
+sudo apt-get install ./swiftx_linux-arm64_3.0.0.deb
 ```
 ---
 # Project 1 - Hello World
