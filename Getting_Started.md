@@ -153,8 +153,117 @@ Today is Tuesday, September 15, 2020 at 7:40:56 AM British Summer Time
 # Project 3 - Hello Library
 In this project we will first create a `swift library` file and then use it in a project.
 ## 1. Create and install a Swift Library.
+To create the library we will be using the `SwiftX` create function.
+```bash
+$ swiftx create --help
 
+Create a Swift library.
+
+    ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+ 1. create a Library from a single source file.
+	- swiftx create <file.swift> -o <Lib_Name>
+    ________________________________
+
+ 2. create a Library from a multiple files in a <Sources> directory.
+	- swiftx create -o <Lib_Name>
+    ________________________________
+
+Usage:
+  swiftx create [filename] [flags]
+
+Flags:
+  -h, --help            help for create
+  -o, --output string   Set library name
+  -p, --package         Package library
+```
+
+```bash
+# goto the swiftModules directory
+$ cd swiftModules
+# create a library from the today.swift module file.
+# use the -p flag to create a .deb install package
+$ swiftx create today.swift -p
+
+building library - Today
+    ________________________________
+
+starting build...
+Complete!
+
+2020/09/18 10:43:40 build completed.
+    ________________________________
+
+Enter details for install package...
+package name:
+today
+version number:
+1.0.0
+
+Complete!
+libToday_1.0.0.deb install package created.
+Install: sudo apt install ./libToday_1.0.0.deb
+    ________________________________
+```
+Install the library
+```bash
+$ sudo apt install ./libToday_1.0.0.deb
+
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Note, selecting 'today' instead of './libToday_1.0.0.deb'
+The following NEW packages will be installed:
+  today
+0 upgraded, 1 newly installed, 0 to remove and 8 not upgraded.
+Need to get 0 B/10.8 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 /home/pi/swiftModules/libToday_1.0.0.deb today armhf 1.0.0 [10.8 kB]
+Selecting previously unselected package today.
+(Reading database ... 42958 files and directories currently installed.)
+Preparing to unpack .../libToday_1.0.0.deb ...
+Unpacking today (1.0.0) ...
+Setting up today (1.0.0) ...
+```
 ## 2. Importing a Swift Library.
+Now that we have `libToday` installed we can use the `import` statement to use it in our project.  
+Return to the swiftProjects directory and edit the helloworld.swift file
+```bash
+$ cd swiftProjects
+```
+In you favorite editor change the code to the following.  
+Use the `import` statement to add the swift library.
+```swift
+import Today
+
+printToday()
+```
+Use `SwiftX` to build the project
+```bash
+$ swiftx build helloworld.swift
+#
+# you should see the following output
+building swift project - helloworld
+
+    ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+Scanning for Modules...
+*** no modules found ***
+    ________________________________
+
+Scanning for Libraries... # here you can see the Today library was added
+*** Adding Today to build command ***
+    ________________________________
+
+starting swift build...
+Complete!
+
+2020/09/18 15:06:59 build completed.
+    ________________________________
+#
+# run ./helloworld to test
+$ ./helloworld
+Welcome to Swift
+Today is Tuesday, September 15, 2020 at 7:40:56 AM British Summer Time
+```
 
 ---
 # Project 4 - Hello Export
