@@ -30,10 +30,10 @@ sudo apt-get install swiftx
 Select the correct package from the [SwiftX release page](https://github.com/futurejones/swiftx-cli/releases/)
 ```bash
 # download the swiftx .deb package
-wget https://github.com/futurejones/swiftx-cli/releases/download/v3.0.0/swiftx_linux-arm64_3.0.0.deb
+wget https://github.com/futurejones/swiftx-cli/releases/download/v1.0.0/swiftx_linux-arm64_1.0.0.deb
 
 # install swiftx
-sudo apt-get install ./swiftx_linux-arm64_3.0.0.deb
+sudo apt-get install ./swiftx_linux-arm64_1.0.0.deb
 ```
 ---
 # Project 1 - Hello World
