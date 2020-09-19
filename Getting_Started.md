@@ -304,6 +304,6 @@ Install: sudo apt install ./helloworld_1.0.0.deb
     ________________________________
 ```
 The `helloworld_1.0.0.deb` package can now be installed and run on any compatible system without the need to pre-install `Swift`.  
-As the package only includes just enough of `Swift` for the application to run it is just a faction of the size of the ful `Swift` install.  
+As the package only includes just enough of `Swift` for the application to run it is a faction of the size of the full `Swift` install.  
 Full Swift Install = 362MB - expanding to 1.16GB  
 SWift-Slim including executable = 10.2MB - expanding to 53MB
