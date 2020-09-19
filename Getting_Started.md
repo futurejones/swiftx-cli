@@ -176,7 +176,7 @@ Flags:
   -o, --output string   Set library name
   -p, --package         Package library
 ```
-
+*Note: The default name for the library is the file name. To change this use the `--output` flag.*
 ```bash
 # goto the swiftModules directory
 $ cd swiftModules
@@ -269,4 +269,41 @@ Today is Tuesday, September 15, 2020 at 7:40:56 AM British Summer Time
 # Project 4 - Hello Export
 In this project we will export a `swift application` complete with the `Swift-Slim` runtime.
 ## 1. Export a Swift Application.
+To export an executable use the `SwiftX` export feature.
+```bash
+$ swiftx export --help
 
+Export self contained install package with Swift-Slim runtime.
+
+    ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+Example:
+$ swiftx export [executable]
+$ swiftx export helloworld
+    ________________________________
+
+Usage:
+  swiftx export [exec file] [flags]
+
+Flags:
+  -h, --help   help for export
+```
+Export `helloworld`
+```bash
+$ swiftx export helloworld
+
+exporting Swift-Slim helloworld install package.
+
+    ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+enter app version number:
+1.0.0
+
+Complete!
+helloworld_1.0.0.deb install package created.
+Install: sudo apt install ./helloworld_1.0.0.deb
+    ________________________________
+```
+The `helloworld_1.0.0.deb` package can now be installed and run on any compatible system without the need to pre-install `Swift`.  
+As the package only includes just enough of `Swift` for the application to run it is just a faction of the size of the ful `Swift` install.  
+Full Swift Install = 362MB - expanding to 1.16GB  
+SWift-Slim including executable = 10.2MB - expanding to 53MB
